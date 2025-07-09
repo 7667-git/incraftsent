@@ -1,0 +1,117 @@
+#auth {
+    text-align: center;
+    padding-top: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: brown; */
+}
+
+#head1 {
+    padding: 20px;
+}
+
+#head1 img {
+    height: 60px;
+    width: 60px;
+}
+
+#head3 {
+    padding: 20px;
+    /* background-color: aquamarine; */
+}
+
+#head3 img {
+    height: 50px;
+    width: 50px;
+}
+
+body {
+    margin: 2px;
+    /* background-color: cadetblue; */
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: center; */
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.d1 {
+    /* background-color: blueviolet; */
+    height: 180px;
+    width: 180px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.d1 img {
+    height: 150px;
+    width: 150px;
+}
+
+.d1 button {
+    width: 60%;
+}
+
+#foot{
+     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+hr{
+        background-color: rgb(224, 217, 217);
+    height: 1px;       /* or whatever thickness you want */
+    border: none;     
+}
+#foot{
+    padding: 4px;
+    background-color: rgb(192, 192, 196);
+}
+#foot img{
+    height: 30px;
+    width: 30px;
+}
+#pop{
+    display: none;
+     position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(211, 228, 228);
+      border: 1px solid rgb(182, 176, 176); 
+}
+ #pop-form {
+    display: grid;
+    /* grid-template-columns: 50px 1fr; */
+    /* gap: 10px 20px;
+    max-width: 500px;*/
+    /* margin: 20px auto;  */
+    padding: 10px;
+    font-family: sans-serif;
+  }
+/* 
+    #pop-form label {
+    text-align: right;
+    padding-top: 6px;
+  }
+
+  #pop-form input,
+  #pop-form textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  #pop-form button {
+    grid-column: span 2;
+    width: 100px;
+    padding: 6px;
+    margin-top: 10px;
+  } */
