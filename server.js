@@ -7,7 +7,11 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 // Serve from root
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "login.html"));
+});
 
 
 app.post("/sendData", async (req, res) => {
