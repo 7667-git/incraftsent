@@ -12,7 +12,12 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "login.html"));
 });
-
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "signup.html"));
+});
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
 
 app.post("/sendData", async (req, res) => {
     console.log("333333333")
