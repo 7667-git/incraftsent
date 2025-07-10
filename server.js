@@ -7,24 +7,8 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 // Serve from root
-// app.use(express.static(__dirname));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "login.html")); // default route
-});
-
-app.get("/signup", (req, res) => {
-  res.sendFile(path.join(__dirname, "signup.html"));
-});
-
-app.get("/home", (req, res) => {
-  res.sendFile(path.join(__dirname, "home.html"));
-});
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.post("/sendData", async (req, res) => {
-    console.log("333333333")
-
-  console.log("333333333",req.body)
   const { address, phone, qty, notes, email ,image} = req.body;
 
   // configure your email here

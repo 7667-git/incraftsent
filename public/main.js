@@ -1,16 +1,12 @@
 let currentImage = null;
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("helloo")
     var registerData = document.getElementById('register')
-    console.log(registerData, "rr")
     if (registerData) {
         registerData.addEventListener('submit', (e) => {
             e.preventDefault();
-            console.log("jjj")
             var name = document.getElementById('name').value
             var email = document.getElementById('email').value
             var password = document.getElementById('password').value
-            console.log(name, email, password)
       const users = JSON.parse(localStorage.getItem("users")) || {};
             users[email] = {
                 name: name,
@@ -52,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
        var phone = document.getElementById('phone').value
        var notes = document.getElementById('cust').value
        var useremail = localStorage.getItem('Useremail')
-       console.log(useremail,"ss")
        var image = currentImage.src
       var details = {
         address : address,
@@ -62,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
         email:useremail,
         image:image
        }
-       console.log(details,"11")
        const response = await fetch('/sendData',{
         method:"POST",
         headers:{
@@ -72,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
        })
 
        const result = await response.text();
-       console.log(result,"22")
        alert(result);
       cancelPopUp();
 
@@ -80,15 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })   
  function openBuyPopup(button){
-            console.log("Inside")
             const container = button.closest('.d1')
-            console.log(container,"container")
             currentImage = container.querySelector('img');
-            console.log(currentImage,"kk")
             document.getElementById("pop").style.display = "block";
         }
 function cancelPopUp(){
-            console.log("Inside")
             document.getElementById("pop-form").reset()
             document.getElementById("pop").style.display = "none";
         }
