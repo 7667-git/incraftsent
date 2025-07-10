@@ -8,6 +8,10 @@ const app = express();
 app.use(bodyParser.json());
 // Serve from root
 app.use(express.static(path.join(__dirname, 'public')));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "login.html"));
+});
+
 app.post("/sendData", async (req, res) => {
   const { address, phone, qty, notes, email ,image} = req.body;
 
