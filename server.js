@@ -10,12 +10,14 @@ app.use(bodyParser.json());
 // app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "login.html"));
+  res.sendFile(path.join(__dirname, "login.html")); // default route
 });
-app.get("/", (req, res) => {
+
+app.get("/signup", (req, res) => {
   res.sendFile(path.join(__dirname, "signup.html"));
 });
-app.get("/", (req, res) => {
+
+app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "home.html"));
 });
 
